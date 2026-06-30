@@ -2,8 +2,7 @@
 title: "T-SAFE: Tactile Failure Diagnosis and Recovery for Robotic Assembly"
 collection: projects
 proj_type: research
-lab: "Interactive Perception and Robot Learning Lab (IPRL)"
-supervisor: "Prof. Jeannette Bohg"
+lab: "Independent Research, Stanford University"
 location: "Stanford, USA"
 date: 2026-06-01
 date_range: "Jan 2026 – Present"

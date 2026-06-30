@@ -1,8 +1,8 @@
 ---
-title: "Lightweight 3D Inpainting for Cultural Heritage Restoration Using Diffusion Models"
+title: "Mask-Conditioned Voxel Diffusion for Joint Geometry and Color Inpainting"
 collection: publications
 pub_type: preprint
-authors: "Sumuk A., et al."
+authors: "<strong>Aarya Sumuk</strong>"
 venue: "arXiv"
 date: 2025-06-01
 arxiv_url: "https://arxiv.org/abs/2601.00368"

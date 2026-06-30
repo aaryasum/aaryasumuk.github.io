@@ -8,6 +8,7 @@ location: "Stanford, USA"
 date: 2026-01-01
 date_range: "May 2025 – Jan 2026"
 status: completed
+report_url: "/files/Aarya_IPRL.pdf"
 description: "Built a full teleoperation and data pipeline for dual Franka arms and trained diffusion, SERL, and HIL-SERL policies for contact-rich assembly tasks."
 share: false
 ---

@@ -2,7 +2,7 @@
 title: "3D Modelling of Human Hand Using Instrumented Gloves"
 collection: publications
 pub_type: conference
-authors: "Sumuk A., Martinez K. B., Rouhani H."
+authors: "<strong>Aarya Sumuk</strong>, K. B. Martinez, H. Rouhani"
 venue: "Annual Alberta Biomedical Engineering Conference"
 location: "Banff, Canada"
 date: 2023-10-01
