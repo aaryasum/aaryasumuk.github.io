@@ -188,6 +188,8 @@ exclude:
   - log
   - node_modules
   - package.json*
+  - Makefile
+  - serve.sh
   - Rakefile
   - README
   - tmp
