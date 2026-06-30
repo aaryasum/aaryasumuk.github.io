@@ -1,0 +1,78 @@
+---
+layout: archive
+title: "Research"
+permalink: /research/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% assign research_projects = site.projects | where: "proj_type", "research" | sort: "date" | reverse %}
+{% assign course_projects = site.projects | where: "proj_type", "course" | sort: "date" | reverse %}
+
+<!-- ── Publications ─────────────────────────────────────────────────────── -->
+<h2 class="research-heading">Publications</h2>
+
+<div class="pub-list">
+  {% for pub in site.publications reversed %}
+  <div class="pub-item">
+    <span class="pub-badge pub-badge--{{ pub.pub_type }}">
+      {% if pub.pub_type == "conference" %}Conference
+      {% elsif pub.pub_type == "preprint" %}Preprint
+      {% elsif pub.pub_type == "workshop" %}Workshop
+      {% endif %}
+    </span>
+    <div class="pub-body">
+      <p class="pub-title">{{ pub.title }}</p>
+      <p class="pub-meta">{{ pub.authors }}{% if pub.location %} &mdash; <em>{{ pub.venue }}, {{ pub.location }}, {{ pub.date | date: "%Y" }}</em>{% else %} &mdash; <em>{{ pub.venue }}, {{ pub.date | date: "%Y" }}</em>{% endif %}</p>
+      <div class="pub-links">
+        {% if pub.paper_url %}<a class="pub-link" href="{{ pub.paper_url }}" target="_blank">Paper</a>{% endif %}
+        {% if pub.arxiv_url %}<a class="pub-link" href="{{ pub.arxiv_url }}" target="_blank">arXiv</a>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- ── Research Projects ───────────────────────────────────────────────── -->
+<h2 class="research-heading">Research Projects</h2>
+
+<div class="rproject-list">
+  {% for project in research_projects %}
+  <div class="rproject-card">
+    <div class="rproject-card__meta">
+      <span class="rproject-card__range">{{ project.date_range }}</span>
+      {% if project.status == "ongoing" %}<span class="rproject-card__status">Ongoing</span>{% endif %}
+    </div>
+    <h3 class="rproject-card__title">{{ project.title }}</h3>
+    <p class="rproject-card__lab">{{ project.lab }}{% if project.supervisor %} &middot; {{ project.supervisor }}{% endif %}</p>
+    <p class="rproject-card__desc">{{ project.description }}</p>
+    <div class="rproject-card__links">
+      {% if project.paper_url %}<a class="pub-link" href="{{ project.paper_url }}" target="_blank">Paper</a>{% endif %}
+      {% if project.arxiv_url %}<a class="pub-link" href="{{ project.arxiv_url }}" target="_blank">arXiv</a>{% endif %}
+      {% if project.poster_url %}<a class="pub-link" href="{{ project.poster_url }}" target="_blank">Poster</a>{% endif %}
+      {% if project.project_url %}<a class="pub-link" href="{{ project.project_url }}" target="_blank">Project</a>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- ── Course and Selected Projects ───────────────────────────────────── -->
+<h2 class="research-heading">Course and Selected Projects</h2>
+
+<div class="teaching-grid">
+  {% for project in course_projects %}
+  <div class="teaching-card">
+    <div class="teaching-card__term">{{ project.course }}</div>
+    <h3 class="teaching-card__title">{{ project.title }}</h3>
+    {% if project.instructor %}<div class="teaching-card__instructor">{{ project.instructor }}</div>{% endif %}
+    <p class="teaching-card__desc">{{ project.description }}</p>
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:0.5rem;">
+      {% if project.paper_url %}<a class="pub-link" href="{{ project.paper_url }}" target="_blank">Paper</a>{% endif %}
+      {% if project.arxiv_url %}<a class="pub-link" href="{{ project.arxiv_url }}" target="_blank">arXiv</a>{% endif %}
+      {% if project.poster_url %}<a class="pub-link" href="{{ project.poster_url }}" target="_blank">Poster</a>{% endif %}
+      {% if project.project_url %}<a class="pub-link" href="{{ project.project_url }}" target="_blank">Project</a>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
