@@ -10,7 +10,7 @@ redirect_from:
 # Welcome
 *Robot Learning · Manipulation · Tactile Sensing · Human-Robot Interaction*
 
-Hi! I recently graduated from Stanford University with an M.S. in Robotics. I’m drawn to the problem of teaching robots to interact with the physical world — using touch, vision, and experience to handle tasks that require real dexterity and adaptability.
+Hi! I recently graduated from Stanford University with an M.S. in Robotics. I’m interested in grounded robot intelligence — how robotic policies learn spatial, semantic, and physical structure from perception, language, simulation, and real-world interaction. I’m especially drawn to contact-rich manipulation as a testbed for generalization, failure recovery, and skill learning.
 
 At Stanford, I worked in the [IPRL Lab](https://iprl.stanford.edu/) under [Prof. Jeannette Bohg](https://web.stanford.edu/~bohg/), developing learning-based methods for bimanual, contact-rich assembly. I then moved to the [ARM Lab](https://arm.stanford.edu/) with [Prof. Monroe Kennedy III](https://monroekennedy3.com/), exploring how visuotactile world models can give robots a richer sense of contact and force. I also collaborated with [Prof. Allison Okamura](https://profiles.stanford.edu/allison-okamura) in the [CHARM Lab](https://charm.stanford.edu/) on haptic interfaces and human–robot interaction.
 
