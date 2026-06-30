@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Aarya Sumuk"
 title_separator          : "-"
 name                     : &name "Aarya Sumuk"
-description              : &description "Personal site for projects, research, and writing."   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Robotics researcher focused on robot learning, visuotactile manipulation, and human-robot interaction."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://aaryasum.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,7 +26,7 @@ author:
   avatar           : "profile.png"
   name             : "Aarya Sumuk"
   pronouns         : # "she/her"  
-  bio              : "Robotics Researcher"
+  bio              : "Robot Learning Researcher"
   location         : "Palo Alto, CA"
   employer         : "Stanford University"
   uri              : # URL

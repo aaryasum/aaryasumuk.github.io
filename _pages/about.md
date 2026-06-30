@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 # Welcome
-*Robot Learning · Contact-Rich Manipulation · Vision & Touch*
+*Robot Learning · Manipulation · Tactile Sensing · Human-Robot Interaction*
 
 Hi! I recently graduated from Stanford University with an M.S. in Robotics. I’m interested in building robots that can learn from vision, touch, and interaction with the physical world. My research explores grounded robot intelligence through contact-rich manipulation, visuotactile learning, and world models.
 
