@@ -1,0 +1,10 @@
+# Overrides for fast local development — use with Makefile `make dev`
+sass:
+  style: expanded
+
+compress_html:
+  clippings: none
+  ignore:
+    envs: development
+
+incremental: true
