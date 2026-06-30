@@ -9,6 +9,7 @@ date: 2025-04-01
 date_range: "Sep 2024 – Apr 2025"
 status: completed
 weight: 4
+image: "/assets/images/projects/haptic-interface.png"
 description: "Engineered a wearable haptic feedback system with dual linear actuators for real-time proprioceptive experiments, validated with motion capture and flex sensors."
 share: false
 ---
