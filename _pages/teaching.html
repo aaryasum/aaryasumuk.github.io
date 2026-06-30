@@ -5,10 +5,30 @@ permalink: /teaching/
 author_profile: true
 ---
 
-I’ve served as a Course Assistant for the following courses:
-
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<div class="award-banner">
+  <div class="award-banner__icon"><i class="fas fa-award"></i></div>
+  <div class="award-banner__text">
+    <strong>2026 Centennial Teaching Assistant Award</strong>
+    <p>Awarded by the Stanford School of Engineering in recognition of outstanding contributions to teaching.</p>
+  </div>
+</div>
+
+<p>I have served as a Course Assistant for the following courses at Stanford:</p>
+
+<div class="teaching-grid">
+  {% for post in site.teaching reversed %}
+  <div class="teaching-card">
+    <div class="teaching-card__term">{{ post.term }}</div>
+    <h3 class="teaching-card__title">
+      <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+    </h3>
+    <div class="teaching-card__instructor">{{ post.instructor }}</div>
+    <p class="teaching-card__desc">{{ post.description }}</p>
+    {% if post.course_url %}
+    <a class="teaching-card__link" href="{{ post.course_url }}" target="_blank">Course website &rarr;</a>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
