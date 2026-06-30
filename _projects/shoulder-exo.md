@@ -8,6 +8,7 @@ location: "Chennai, India"
 date: 2024-05-01
 date_range: "Feb 2024 – May 2024"
 status: completed
+weight: 6
 description: "Developed a 2-DOF soft shoulder exoskeleton with Bowden cable-driven PID control and IMU feedback, demonstrating 26% faster target acquisition in user studies."
 share: false
 ---

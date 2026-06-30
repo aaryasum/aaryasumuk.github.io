@@ -8,6 +8,7 @@ location: "Stanford, USA"
 date: 2026-06-01
 date_range: "Jan 2026 – Present"
 status: ongoing
+weight: 1
 description: "Training action-conditioned visuo-tactile world models for contact-rich manipulation, using DenseTact sensors and a custom UMI-style gripper to collect multimodal demonstrations."
 share: false
 ---

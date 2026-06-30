@@ -6,6 +6,8 @@ course: "CS329H: ML from Human Preferences"
 instructor: "Prof. Sanmi Koyejo"
 date: 2025-12-01
 date_range: "Oct – Dec 2025"
+weight: 2
+image: "/assets/images/projects/affordances-fig.png"
 description: "Trained a Bradley-Terry preference model on frozen DINO embeddings to produce dense affordance heatmaps that highlight graspable regions from pairwise human judgments, without dense labels or retraining the base encoder."
 report_url: "/files/Aarya_CS329H.pdf"
 github_url: "https://github.com/aaryasum/dino-affordance"

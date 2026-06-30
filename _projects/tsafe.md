@@ -7,6 +7,7 @@ location: "Stanford, USA"
 date: 2026-06-01
 date_range: "Jan 2026 – Present"
 status: ongoing
+weight: 2
 description: "A tactile-aware recovery framework that diagnoses failures such as micro-slip, misalignment, and grasp voids in contact-rich nut assembly, with sim-to-real deployment on SO-101."
 share: false
 ---

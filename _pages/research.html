@@ -7,8 +7,8 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign research_projects = site.projects | where: "proj_type", "research" | sort: "date" | reverse %}
-{% assign course_projects = site.projects | where: "proj_type", "course" | sort: "date" | reverse %}
+{% assign research_projects = site.projects | where: "proj_type", "research" | sort: "weight" %}
+{% assign course_projects = site.projects | where: "proj_type", "course" | sort: "weight" %}
 
 <!-- ── Publications ─────────────────────────────────────────────────────── -->
 <h2 class="research-heading">Publications</h2>
@@ -40,20 +40,27 @@ author_profile: true
 <div class="rproject-list">
   {% for project in research_projects %}
   <div class="rproject-card">
-    <div class="rproject-card__meta">
-      <span class="rproject-card__range">{{ project.date_range }}</span>
-      {% if project.status == "ongoing" %}<span class="rproject-card__status">Ongoing</span>{% endif %}
+    {% if project.image %}
+    <div class="rproject-card__image">
+      <img src="{{ project.image }}" alt="{{ project.title }}" loading="lazy" />
     </div>
-    <h3 class="rproject-card__title">{{ project.title }}</h3>
-    <p class="rproject-card__lab">{{ project.lab }}{% if project.supervisor %} &middot; {{ project.supervisor }}{% endif %}</p>
-    <p class="rproject-card__desc">{{ project.description }}</p>
-    <div class="rproject-card__links">
-      {% if project.paper_url %}<a class="pub-link" href="{{ project.paper_url }}" target="_blank">Paper</a>{% endif %}
-      {% if project.arxiv_url %}<a class="pub-link" href="{{ project.arxiv_url }}" target="_blank">arXiv</a>{% endif %}
-      {% if project.report_url %}<a class="pub-link" href="{{ project.report_url }}" target="_blank">Report</a>{% endif %}
-      {% if project.poster_url %}<a class="pub-link" href="{{ project.poster_url }}" target="_blank">Poster</a>{% endif %}
-      {% if project.github_url %}<a class="pub-link" href="{{ project.github_url }}" target="_blank">Code</a>{% endif %}
-      {% if project.project_url %}<a class="pub-link" href="{{ project.project_url }}" target="_blank">Project</a>{% endif %}
+    {% endif %}
+    <div class="rproject-card__body">
+      <div class="rproject-card__meta">
+        <span class="rproject-card__range">{{ project.date_range }}</span>
+        {% if project.status == "ongoing" %}<span class="rproject-card__status">Ongoing</span>{% endif %}
+      </div>
+      <h3 class="rproject-card__title">{{ project.title }}</h3>
+      <p class="rproject-card__lab">{{ project.lab }}{% if project.supervisor %} &middot; {{ project.supervisor }}{% endif %}</p>
+      <p class="rproject-card__desc">{{ project.description }}</p>
+      <div class="rproject-card__links">
+        {% if project.paper_url %}<a class="pub-link" href="{{ project.paper_url }}" target="_blank">Paper</a>{% endif %}
+        {% if project.arxiv_url %}<a class="pub-link" href="{{ project.arxiv_url }}" target="_blank">arXiv</a>{% endif %}
+        {% if project.report_url %}<a class="pub-link" href="{{ project.report_url }}" target="_blank">Report</a>{% endif %}
+        {% if project.poster_url %}<a class="pub-link" href="{{ project.poster_url }}" target="_blank">Poster</a>{% endif %}
+        {% if project.github_url %}<a class="pub-link" href="{{ project.github_url }}" target="_blank">Code</a>{% endif %}
+        {% if project.project_url %}<a class="pub-link" href="{{ project.project_url }}" target="_blank">Project</a>{% endif %}
+      </div>
     </div>
   </div>
   {% endfor %}
@@ -62,20 +69,27 @@ author_profile: true
 <!-- ── Course and Selected Projects ───────────────────────────────────── -->
 <h2 class="research-heading">Course and Selected Projects</h2>
 
-<div class="teaching-grid">
+<div class="project-grid">
   {% for project in course_projects %}
-  <div class="teaching-card">
-    <div class="teaching-card__term">{{ project.course }}</div>
-    <h3 class="teaching-card__title">{{ project.title }}</h3>
-    {% if project.instructor %}<div class="teaching-card__instructor">{{ project.instructor }}</div>{% endif %}
-    <p class="teaching-card__desc">{{ project.description }}</p>
-    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:0.5rem;">
-      {% if project.paper_url %}<a class="pub-link" href="{{ project.paper_url }}" target="_blank">Paper</a>{% endif %}
-      {% if project.arxiv_url %}<a class="pub-link" href="{{ project.arxiv_url }}" target="_blank">arXiv</a>{% endif %}
-      {% if project.report_url %}<a class="pub-link" href="{{ project.report_url }}" target="_blank">Report</a>{% endif %}
-      {% if project.poster_url %}<a class="pub-link" href="{{ project.poster_url }}" target="_blank">Poster</a>{% endif %}
-      {% if project.github_url %}<a class="pub-link" href="{{ project.github_url }}" target="_blank">Code</a>{% endif %}
-      {% if project.project_url %}<a class="pub-link" href="{{ project.project_url }}" target="_blank">Project</a>{% endif %}
+  <div class="project-card">
+    {% if project.image %}
+    <div class="project-card__image">
+      <img src="{{ project.image }}" alt="{{ project.title }}" loading="lazy" />
+    </div>
+    {% endif %}
+    <div class="project-card__body">
+      <div class="project-card__term">{{ project.course }}</div>
+      <h3 class="project-card__title">{{ project.title }}</h3>
+      {% if project.instructor %}<div class="project-card__instructor">{{ project.instructor }}</div>{% endif %}
+      <p class="project-card__desc">{{ project.description }}</p>
+      <div class="project-card__links">
+        {% if project.paper_url %}<a class="pub-link" href="{{ project.paper_url }}" target="_blank">Paper</a>{% endif %}
+        {% if project.arxiv_url %}<a class="pub-link" href="{{ project.arxiv_url }}" target="_blank">arXiv</a>{% endif %}
+        {% if project.report_url %}<a class="pub-link" href="{{ project.report_url }}" target="_blank">Report</a>{% endif %}
+        {% if project.poster_url %}<a class="pub-link" href="{{ project.poster_url }}" target="_blank">Poster</a>{% endif %}
+        {% if project.github_url %}<a class="pub-link" href="{{ project.github_url }}" target="_blank">Code</a>{% endif %}
+        {% if project.project_url %}<a class="pub-link" href="{{ project.project_url }}" target="_blank">Project</a>{% endif %}
+      </div>
     </div>
   </div>
   {% endfor %}
